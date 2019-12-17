@@ -1,52 +1,6 @@
 #include <iostream>
 #include <string>
-//Using functions
-int parameters();
-int prompt();
-void goals();
-
-int main()
-{
-	using std::cout;
-	using std::string;
-	cout << "Local Password manager";
-	//Testing functions
-	prompt();
-	parameters();
-	goals();
-	
-}
-
-prompt()
-{
-	//Getting the data
-	return 0;
-}
-
-
-
-
-parameters()
-{
-	 struct data
-        {
-                std::string username;
-                std::string email;
-                std::string password;
-                std::string website;
-        };
-
-        struct id
-        {
-                int UID;
-                int ZID;
-        };
-return 0;
-};
-
-void goals()
-{
-//Defining the data structure
+//Code restructure
         /*
         Outline of development
         (3 Seperate Databases one for the user information, a second one for a users UID per session and a ZID, matching UID'S to ZID, and a fourth database for matching ZID'S to web logins)
@@ -60,4 +14,31 @@ void goals()
         After the text file is written upload the values to a database then delete the local text file(Python/C++) DB1 matching the UID
         Once uploaded
         */
-}	
+//Structures
+struct data
+{
+    std::string username;
+    std::string email;
+    std::string password;
+    std::string website;
+};
+//Classes are not needed yet
+struct id
+{
+    int UID;
+    int ZID;
+};
+
+int main()
+{
+	using std::cin;
+	using std::cout;
+	using std::string;
+	data user;
+	cout << "Enter your username";
+	cin >> user.username;
+	cout << user.username;
+	return 0;
+}
+
+
