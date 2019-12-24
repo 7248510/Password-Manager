@@ -8,17 +8,19 @@ int main()
 	using std::cout;
 	using std::string;
 	using std::ofstream;
-	string y;
-	string z;
+	string y; //User input + file.txt(.txt)
+	string z; //Used to get the temporary file name specifically t=='temp' + file.txt(.txt). Final outcome temp.txt
+	string t; //The 'temp' for temp.txt
+	t = "temp";
 	ofstream fname;
+	ofstream tempw;
 	fileInfo file;
 	file.txt = ".txt";
 	cout << "What would you like to call your file?\n";
-	cin >> file.fileName;
+	cin >> file.fileName; //Getting the input from the user to determine the file name
 	y = file.fileName + file.txt;
+	z = t + file.txt;
 	cout << "Your text file is called " << y << ".\n";
-	fname.open(y);
-		
 //Grabing the Username/ID
 	data user;
 	cout << "Enter your username.\n";
@@ -42,6 +44,14 @@ int main()
 	cin >> userWebsite.website;
 	cout << "The website that is assigned to this account is " << userWebsite.website << ".";
 //Writing the data to the newly created text file.
+//The z file is a temporary file for python to insert into a database
+	tempw.open(z);
+	tempw << user.username << "\n";
+	tempw << userEmail.email << "\n";
+	tempw << userPassword.password << "\n";
+	tempw << userWebsite.website << "\n";
+//This text file is for the user to view clear text
+	fname.open(y);
 	fname << "Username: "<< user.username << "\n";
 	fname << "Email: " << userEmail.email << "\n";
 	fname << "Password: " << userPassword.password << "\n";
