@@ -1,10 +1,10 @@
 # Password-Manager project
 An open source password-manager.
 This project is under development.
-Goals:
-Create a local password manager
-Encryption
-Two-Factor authentication integration
-Gui for the local application
-Multiple databases
-Web application that can retrieve passwords with a multi-factor verification
+<li><b>Goals:</b></li>
+<li>Create a local password manager</li>
+<li>Encryption</li>
+<li>Two-Factor authentication integration</li>
+<li>Gui for the local application</li>
+<li>Multiple databases</li>
+<li>Web application that can retrieve passwords with a multi-factor verification</li>
